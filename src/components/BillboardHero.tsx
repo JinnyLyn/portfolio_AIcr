@@ -56,7 +56,7 @@ export const BillboardHero: React.FC<BillboardHeroProps> = ({
         {/* Left Column: Metadata, Fact Sheet & Executive Brief */}
         <div className="lg:col-span-4 flex flex-col justify-between space-y-8 order-2 lg:order-1 pt-1">
           {/* Executive Summary Points */}
-          <div className="space-y-4 text-neutral-700 text-sm md:text-[14.5px] leading-relaxed">
+          <div className="space-y-4 text-neutral-700 text-sm md:text-[14.5px] leading-[1.75] break-keep">
             {isEn ? (
               <>
                 <p>

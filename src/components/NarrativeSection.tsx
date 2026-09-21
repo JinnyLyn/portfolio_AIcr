@@ -14,19 +14,15 @@ export const NarrativeSection: React.FC<NarrativeSectionProps> = ({ onOpenContac
   return (
     <section id="about" className="py-20 md:py-28 max-w-7xl mx-auto px-6 lg:px-12 border-t border-black/10">
       {/* 1. Refined, Minimal About Header */}
-      <div className="max-w-4xl mb-14 md:mb-16">
+      <div className="max-w-5xl mb-12 md:mb-14">
         <span className="text-xs font-mono uppercase tracking-widest text-emerald-800 font-semibold mb-3 block">
           {isEn ? 'About Me' : '소개'}
         </span>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light text-neutral-950 tracking-tight leading-[1.25]">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-light text-neutral-950 tracking-tight leading-snug whitespace-normal md:whitespace-nowrap">
           {isEn ? (
-            <>
-              Researching system vulnerabilities and adversarial AI security.
-            </>
+            <span>Researching system vulnerabilities and adversarial AI security.</span>
           ) : (
-            <>
-              시스템 취약점 분석과 적대적 AI 보안을 연구합니다.
-            </>
+            <span>시스템 취약점 분석과 적대적 AI 보안을 연구합니다.</span>
           )}
         </h1>
       </div>
@@ -108,7 +104,7 @@ export const NarrativeSection: React.FC<NarrativeSectionProps> = ({ onOpenContac
             </h2>
 
             {/* Narrative Paragraphs */}
-            <div className="space-y-5 text-neutral-700 text-sm sm:text-base leading-relaxed font-light">
+            <div className="space-y-5 text-neutral-700 text-sm sm:text-base leading-[1.8] font-light break-keep">
               {isEn ? (
                 <>
                   <p>
