@@ -1,0 +1,6 @@
+{
+  "name": "노진서 포트폴리오 | Jinseo Noh Portfolio",
+  "description": "보안 연구원 (취약점 분석 / 레드팀 / 악성코드 분석) 노진서의 포트폴리오 웹사이트",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
