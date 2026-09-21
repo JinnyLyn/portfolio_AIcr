@@ -13,16 +13,19 @@ export const NarrativeSection: React.FC<NarrativeSectionProps> = ({ onOpenContac
 
   return (
     <section id="about" className="py-20 md:py-28 max-w-7xl mx-auto px-6 lg:px-12 border-t border-black/10">
-      {/* 1. Large Billboard Hero Statement (Max Pratt Header) */}
-      <div className="max-w-5xl mb-20">
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-light text-neutral-950 tracking-tight leading-[1.2]">
+      {/* 1. Refined, Minimal About Header */}
+      <div className="max-w-4xl mb-14 md:mb-16">
+        <span className="text-xs font-mono uppercase tracking-widest text-emerald-800 font-semibold mb-3 block">
+          {isEn ? 'About Me' : '소개'}
+        </span>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light text-neutral-950 tracking-tight leading-[1.25]">
           {isEn ? (
             <>
-              Hi, I’m Jinseo Noh. Security Researcher & Student at BUFS. Researching adversarial malware robustness, vulnerability discovery & binary exploitation.
+              Researching system vulnerabilities and adversarial AI security.
             </>
           ) : (
             <>
-              안녕하세요, 노진서입니다. 부산외국어대학교 스마트융합보안전공에서 취약점 분석, 리버스 엔지니어링, 악성코드 행위 포렌식 및 적대적 AI 보안을 연구하고 있습니다.
+              시스템 취약점 분석과 적대적 AI 보안을 연구합니다.
             </>
           )}
         </h1>
@@ -92,14 +95,14 @@ export const NarrativeSection: React.FC<NarrativeSectionProps> = ({ onOpenContac
         <div className="lg:col-span-8 space-y-12">
           {/* Subheading (Passion for Design / Security) */}
           <div className="space-y-6">
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-light text-neutral-950 tracking-tight leading-[1.2]">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-light text-neutral-900 tracking-tight leading-snug">
               {isEn ? (
                 <>
-                  Passion for Security: From <span className="font-normal text-neutral-900 underline decoration-neutral-300 underline-offset-4">Systems</span> to <span className="font-normal text-neutral-900 underline decoration-neutral-300 underline-offset-4">Adversarial ML</span>, My Journey So Far.
+                  Background & Research Focus
                 </>
               ) : (
                 <>
-                  보안에 대한 열정: <span className="font-normal text-neutral-900 underline decoration-neutral-300 underline-offset-4">시스템 내부 구조</span>에서 <span className="font-normal text-neutral-900 underline decoration-neutral-300 underline-offset-4">적대적 AI 보안</span>까지의 여정
+                  연구 배경 및 관심 분야
                 </>
               )}
             </h2>
