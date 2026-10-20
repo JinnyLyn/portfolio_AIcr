@@ -95,9 +95,6 @@ export default function App() {
             lang={lang}
           />
 
-          {/* Full-width Workspace/Lab Visual Banner */}
-          <FullWidthBanner lang={lang} />
-
           {/* Timeline & Recognitions (KICS, Hackathons, ByteDance) */}
           <TimelineSection lang={lang} />
 

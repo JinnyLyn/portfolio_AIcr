@@ -101,26 +101,44 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, on
                 </h3>
               </div>
 
-              {project.externalLink ? (
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => openExternal(project.externalLink!, title)}
-                  className="shrink-0 px-4 py-2 rounded-full bg-emerald-500 hover:bg-emerald-400 text-neutral-950 text-xs font-semibold transition-all flex items-center gap-1.5 shadow-md cursor-pointer"
-                >
-                  <ExternalLink className="w-3.5 h-3.5" />
-                  <span>
-                    {project.id === 'ctf-study-blog'
-                      ? (isEn ? 'Visit Blog' : '블로그 방문하기')
-                      : (isEn ? 'Visit Live Service' : '라이브 서비스 방문')}
-                  </span>
-                </motion.button>
-              ) : project.id === 'ctf-study-blog' ? (
-                <div className="shrink-0 px-3.5 py-1.5 rounded-full bg-white/15 border border-white/20 text-neutral-200 text-xs font-mono flex items-center gap-1.5 backdrop-blur-md">
-                  <BookOpen className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>{isEn ? 'URL to be linked' : '블로그 개설 후 링크 연동 예정'}</span>
-                </div>
-              ) : null}
+              <div className="flex flex-wrap items-center gap-2">
+                {project.externalLink ? (
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => openExternal(project.externalLink!, title)}
+                    className="shrink-0 px-4 py-2 rounded-full bg-emerald-500 hover:bg-emerald-400 text-neutral-950 text-xs font-semibold transition-all flex items-center gap-1.5 shadow-md cursor-pointer"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    <span>
+                      {project.id === 'ctf-study-blog'
+                        ? (isEn ? 'Visit Blog' : '블로그 방문하기')
+                        : (isEn ? 'Visit Live Service' : '라이브 서비스 방문')}
+                    </span>
+                  </motion.button>
+                ) : project.id === 'ctf-study-blog' ? (
+                  <div className="shrink-0 px-3.5 py-1.5 rounded-full bg-white/15 border border-white/20 text-neutral-200 text-xs font-mono flex items-center gap-1.5 backdrop-blur-md">
+                    <BookOpen className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>{isEn ? 'URL to be linked' : '블로그 개설 후 링크 연동 예정'}</span>
+                  </div>
+                ) : null}
+
+                {project.articleLink && (
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => openExternal(project.articleLink!, project.articleTitle || 'Press Article')}
+                    className="shrink-0 px-4 py-2 rounded-full bg-white/20 hover:bg-white/35 border border-white/30 text-white text-xs font-semibold transition-all flex items-center gap-1.5 shadow-md backdrop-blur-md cursor-pointer"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5 text-neutral-200" />
+                    <span>
+                      {isEn
+                        ? (project.articleTitleEn || 'View Press Coverage')
+                        : (project.articleTitle || '언론 보도자료 보기')}
+                    </span>
+                  </motion.button>
+                )}
+              </div>
             </div>
           </div>
 
@@ -203,6 +221,40 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, on
                       </div>
                     );
                   })}
+                </div>
+              </div>
+            )}
+
+            {/* Photo Gallery & Official Certificates if available */}
+            {project.gallery && project.gallery.length > 0 && (
+              <div>
+                <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-400 mb-3">
+                  {isEn ? 'Activity Photos & Verification Documents' : '활동 현장 사진 및 공식 인증 서류'}
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {project.gallery.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="group/img rounded-xl overflow-hidden border border-black/10 bg-neutral-900 shadow-sm flex flex-col"
+                    >
+                      <div className="relative overflow-hidden bg-neutral-950 aspect-[4/3] flex items-center justify-center">
+                        <img
+                          src={item.url}
+                          alt={isEn && item.captionEn ? item.captionEn : item.caption || title}
+                          className="w-full h-full object-cover object-center group-hover/img:scale-103 transition-transform duration-500 ease-out cursor-pointer"
+                          onClick={() => window.open(item.url, '_blank')}
+                        />
+                      </div>
+                      {(item.caption || item.captionEn) && (
+                        <div className="p-3 bg-neutral-50 border-t border-black/5 text-xs text-neutral-600 flex items-center justify-between">
+                          <span className="font-medium text-neutral-800">
+                            {isEn && item.captionEn ? item.captionEn : item.caption}
+                          </span>
+                          <span className="text-[11px] font-mono text-neutral-400">Click to view full</span>
+                        </div>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
             )}

@@ -66,7 +66,7 @@ export const BillboardHero: React.FC<BillboardHeroProps> = ({
                   First author of <strong className="text-neutral-950 font-medium">"A Study on the Robustness Comparison of Deep Learning-based Malware Detection Systems using API Sequence Analysis"</strong>, approved as undergraduate thesis and presented at <strong className="text-neutral-950 font-medium">KICS 2026</strong>, with two follow-up studies in progress.
                 </p>
                 <p>
-                  Demonstrated technical leadership as <strong className="text-neutral-950 font-medium">Team CTO</strong> (Hackathon Award recipient) and operational command managing 30-member data teams at ByteDance.
+                  Demonstrated technical leadership as <strong className="text-neutral-950 font-medium">Team CTO</strong> (Hackathon Excellence Award recipient), selective entrant to the <strong className="text-neutral-950 font-medium">SoftBank Hackathon 2026</strong> preliminary round, and operational command managing 30-member data teams at ByteDance.
                 </p>
               </>
             ) : (
@@ -78,7 +78,7 @@ export const BillboardHero: React.FC<BillboardHeroProps> = ({
                   제1저자로서 「API 시퀀스 분석을 통한 딥러닝 기반 악성코드 탐지 기법의 강건성 비교에 관한 연구」 <strong className="text-neutral-950 font-medium">학부논문 승인 완료 및 KICS 2026 발표</strong>를 달성하였으며, 현재 <strong className="text-neutral-950 font-medium">2가지 후속 연구</strong>를 진행 중입니다.
                 </p>
                 <p>
-                  <strong className="text-neutral-950 font-medium">팀 마루비스 개발 총괄(창업 해커톤 우수상)</strong> 및 30인 규모 ByteDance 팀 SV로서 기술 설계와 실행 역량을 입증했습니다.
+                  <strong className="text-neutral-950 font-medium">팀 마루비스 개발 총괄(창업 해커톤 우수상)</strong>, <strong className="text-neutral-950 font-medium">SoftBank Hackathon 2026</strong> 오프라인 예선 진출(Team Diamond), 30인 규모 ByteDance 팀 SV로서 설계와 실행 역량을 증명해왔습니다.
                 </p>
               </>
             )}

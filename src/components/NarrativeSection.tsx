@@ -38,9 +38,10 @@ export const NarrativeSection: React.FC<NarrativeSectionProps> = ({ onOpenContac
             </p>
             <div className="space-y-1 text-sm text-neutral-800">
               <p className="font-light">Adversarial ML Transformer (KICS '26)</p>
+              <p className="font-light">SoftBank Hackathon '26 (Team Diamond)</p>
+              <p className="font-light">DocenTalk AI Docent (Hackathon Winner)</p>
               <p className="font-light">x86-64 Memory Exploits (Pwnable)</p>
               <p className="font-light">Virtual Sandbox Dynamic Forensics</p>
-              <p className="font-light">DocenTalk AI Docent (Hackathon Winner)</p>
               <p className="font-light">BUFS Camchat CI/CD Architecture</p>
             </div>
           </div>
@@ -117,7 +118,7 @@ export const NarrativeSection: React.FC<NarrativeSectionProps> = ({ onOpenContac
                     Beyond academic research, I actively sharpen practical binary exploitation skills across Hack The Box, TryHackMe, and DreamHack CTF platforms—disassembling x86/x64 binaries, analyzing call stacks with GDB and IDA Pro, and bypassing modern mitigations.
                   </p>
                   <p>
-                    I also served as Lead Developer/CTO of Team Maruvis, developing DocenTalk (real-time voice AI docent) which won the Startup Idea Hackathon Excellence Award, and supervised a 30-member Korean data preprocessing team at ByteDance. I am always driven to dive deeper into root cause vulnerability discovery, malware behavior, and robust offensive security research.
+                    In collaborative engineering, I led Team Maruvis as CTO to develop DocenTalk (real-time voice AI docent), winning the Startup Idea Hackathon Excellence Award (featured in Kookje Daily News). Most recently, I passed the selective screening for SoftBank Hackathon 2026, advancing to the 2-day offline preliminary round with Team Diamond and earning the official Certificate of Completion. I also supervised a 30-member data team at ByteDance. I am always driven to dive deeper into root cause vulnerability discovery, malware behavior, and robust offensive security research.
                   </p>
                 </>
               ) : (
@@ -132,7 +133,7 @@ export const NarrativeSection: React.FC<NarrativeSectionProps> = ({ onOpenContac
                     이론 연구에 머무르지 않고 Hack The Box, TryHackMe, DreamHack 및 다수의 CTF 대회 참가를 통해 실제 바이너리의 정적·동적 취약점을 식별하고 메모리 오염을 유도하는 익스플로잇 체인을 설계하는 실무적 분석 감각을 일상적으로 단련하고 있습니다.
                   </p>
                   <p>
-                    또한 팀 마루비스 CTO로서 실시간 AI 음성 도슨트 「도슨톡(DocenTalk)」을 개발하여 창업 해커톤 우수상을 수상하였으며, ByteDance 한국인 전처리 팀 SV로서 30인 규모의 인력 배치와 품질 검수를 총괄했습니다. 언제든 새로운 보안 연구와 협업에 열려 있으니 편하게 연락해 주세요.
+                    또한 팀 마루비스 CTO로서 실시간 AI 음성 도슨트 「도슨톡(DocenTalk)」을 개발하여 창업 해커톤 우수상을 수상(국제신문 공식 보도)하였으며, 최근에는 서류 심사를 통과하여 「SoftBank Hackathon 2026」 오프라인 예선에 Team Diamond로 참가해 무박 개발을 완수하고 공식 참여 확인증을 수여받았습니다. 이전에는 ByteDance 한국인 전처리 팀 SV로서 30인 규모의 인력 관리와 품질 검수를 총괄했습니다. 언제든 새로운 보안 연구와 협업에 열려 있으니 편하게 연락해 주세요.
                   </p>
                 </>
               )}
@@ -245,6 +246,13 @@ export const NarrativeSection: React.FC<NarrativeSectionProps> = ({ onOpenContac
                 </span>
               </div>
               <div className="md:col-span-9 space-y-3">
+                <div className="flex items-center justify-between py-2 border-b border-black/5">
+                  <span className="text-sm font-medium text-neutral-900">
+                    {isEn ? 'SoftBank Hackathon 2026 Preliminary Round (Team Diamond · Certificate of Completion)' : 'SoftBank Hackathon 2026 오프라인 예선 참가 및 수료 (Team Diamond · 참여 확인증)'}
+                  </span>
+                  <span className="text-xs font-mono text-neutral-500">2026. 10</span>
+                </div>
+
                 <div className="flex items-center justify-between py-2 border-b border-black/5">
                   <span className="text-sm font-medium text-neutral-900">
                     {isEn ? 'KICS 2026 Summer Conference Presentation (1st Author)' : 'KICS 2026 하계종합학술발표회 논문 발표 (제1저자)'}

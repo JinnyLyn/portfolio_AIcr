@@ -16,8 +16,12 @@ export interface ProjectItem {
   tagsEn?: string[];
   category: 'research' | 'project' | 'security' | 'leadership';
   image?: string;
+  gallery?: { url: string; caption?: string; captionEn?: string }[];
   gradient?: string;
   externalLink?: string;
+  articleLink?: string;
+  articleTitle?: string;
+  articleTitleEn?: string;
   stats?: { label: string; value: string; labelEn?: string; valueEn?: string }[];
 }
 
