@@ -40,8 +40,6 @@ export const NarrativeSection: React.FC<NarrativeSectionProps> = ({ onOpenContac
               <p className="font-light">Adversarial ML Transformer (KICS '26)</p>
               <p className="font-light">SoftBank Hackathon '26 (Team Diamond)</p>
               <p className="font-light">DocenTalk AI Docent (Hackathon Winner)</p>
-              <p className="font-light">x86-64 Memory Exploits (Pwnable)</p>
-              <p className="font-light">Virtual Sandbox Dynamic Forensics</p>
               <p className="font-light">BUFS Camchat CI/CD Architecture</p>
             </div>
           </div>
@@ -52,11 +50,11 @@ export const NarrativeSection: React.FC<NarrativeSectionProps> = ({ onOpenContac
               {isEn ? 'Hard skills:' : '전문 기술 (Hard skills):'}
             </p>
             <div className="space-y-1 text-sm text-neutral-800">
+              <p className="font-light">Python (PyTorch, TensorFlow v2, Pwntools)</p>
               <p className="font-light">Reverse Engineering (IDA Pro, Ghidra)</p>
               <p className="font-light">Binary Exploitation (GDB, Pwndbg)</p>
-              <p className="font-light">Linux & Kernel Internals</p>
-              <p className="font-light">Python & C/C++ Systems</p>
-              <p className="font-light">Adversarial Perturbation & Robustness</p>
+              <p className="font-light">C/C++ Systems & Kernel Internals</p>
+              <p className="font-light">Linux Daily Driver & Bash Scripting</p>
               <p className="font-light">Network Protocols & Traffic Analysis</p>
               <p className="font-light">Git & Automated CI/CD Pipelines</p>
             </div>
@@ -76,14 +74,19 @@ export const NarrativeSection: React.FC<NarrativeSectionProps> = ({ onOpenContac
             </div>
           </div>
 
-          {/* Languages */}
+          {/* Languages & Test Scores */}
           <div className="space-y-3">
             <p className="text-xs font-mono uppercase tracking-widest text-neutral-400">
-              {isEn ? 'Languages:' : '구사 언어:'}
+              {isEn ? 'Languages & Scores:' : '구사 언어 및 공인 성적:'}
             </p>
             <div className="space-y-1 text-sm text-neutral-800">
               <p className="font-light">{isEn ? 'Korean – Native' : '한국어 – 원어민 (Native)'}</p>
-              <p className="font-light">{isEn ? 'English – Technical & Professional' : '영어 – 실무 및 논문 독해 (Professional)'}</p>
+              <div className="flex items-baseline justify-between">
+                <p className="font-light">{isEn ? 'English – Fluent & Technical' : '영어 – 실무 및 논문 독해'}</p>
+                <span className="font-mono text-xs font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                  TOEIC 980
+                </span>
+              </div>
             </div>
           </div>
         </div>

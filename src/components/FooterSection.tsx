@@ -27,7 +27,7 @@ export const FooterSection: React.FC<FooterSectionProps> = ({ onOpenContact, lan
         <div className="flex flex-col sm:flex-row items-center justify-between pb-12 border-b border-white/10 gap-4 text-xs font-mono text-neutral-400">
           <div>Portfolio 2026 · Jinseo Noh</div>
           <div className="text-white font-sans text-sm font-medium tracking-tight">
-            {isEn ? 'Jinseo Noh / Security Researcher' : '노진서 / Security Researcher'}
+            {isEn ? 'Jinseo Noh / AI Security Researcher' : '노진서 / AI 보안 연구원'}
           </div>
           <div>35.2657° N, 129.0838° E · Busan, KR</div>
         </div>

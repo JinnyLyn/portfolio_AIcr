@@ -9,11 +9,13 @@ import { TechStackSection } from './components/TechStackSection';
 import { FooterSection } from './components/FooterSection';
 import { ContactDrawer } from './components/ContactDrawer';
 import { ProjectModal } from './components/ProjectModal';
+import { ResumeModal } from './components/ResumeModal';
 import { ProjectItem } from './types';
 import { SiteTransitionProvider } from './components/SiteTransitionOverlay';
 
 export default function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
   const [activeSection, setActiveSection] = useState('hero');
   const [lang, setLang] = useState<'ko' | 'en'>('ko');
@@ -67,6 +69,7 @@ export default function App() {
         {/* Sticky Max Pratt Navigation */}
         <Navbar
           onOpenContact={() => setIsContactOpen(true)}
+          onOpenResume={() => setIsResumeOpen(true)}
           onNavigate={handleNavigate}
           activeSection={activeSection}
           lang={lang}
@@ -120,6 +123,13 @@ export default function App() {
           project={selectedProject}
           onClose={() => setSelectedProject(null)}
           onOpenContact={() => setIsContactOpen(true)}
+          lang={lang}
+        />
+
+        {/* 1-Page Clean Printable Official Resume (CV) Modal */}
+        <ResumeModal
+          isOpen={isResumeOpen}
+          onClose={() => setIsResumeOpen(false)}
           lang={lang}
         />
       </div>

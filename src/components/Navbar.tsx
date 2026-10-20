@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Mail, Phone, Github, Menu, X, ArrowUpRight, Copy, Check, Globe } from 'lucide-react';
+import { Mail, Phone, Github, Menu, X, ArrowUpRight, Copy, Check, Globe, FileText } from 'lucide-react';
 import { profileData } from '../data/portfolioData';
 import { useSiteTransition } from './SiteTransitionOverlay';
 
 interface NavbarProps {
   onOpenContact: () => void;
+  onOpenResume?: () => void;
   onNavigate: (sectionId: string) => void;
   activeSection: string;
   lang?: 'ko' | 'en';
@@ -14,6 +15,7 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ 
   onOpenContact, 
+  onOpenResume,
   onNavigate, 
   activeSection,
   lang = 'ko',
@@ -84,12 +86,26 @@ export const Navbar: React.FC<NavbarProps> = ({
               );
             })}
 
+            {/* CV / Resume Button */}
+            {onOpenResume && (
+              <motion.button
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+                onClick={onOpenResume}
+                className="ml-1 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-neutral-100 text-neutral-800 hover:text-black hover:bg-neutral-200 transition-colors cursor-pointer flex items-center gap-1.5"
+                title={lang === 'en' ? 'Curriculum Vitae' : '공식 이력서(CV)'}
+              >
+                <FileText className="w-3.5 h-3.5 text-neutral-500" />
+                <span>CV</span>
+              </motion.button>
+            )}
+
             {/* Contacts Button with Tap/Hover Scale */}
             <motion.button
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
               onClick={onOpenContact}
-              className="ml-1 px-4 py-1.5 rounded-full text-xs font-semibold bg-neutral-100 text-neutral-900 hover:bg-neutral-200 transition-colors cursor-pointer"
+              className="ml-1 px-4 py-1.5 rounded-full text-xs font-semibold bg-neutral-900 text-white hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs"
             >
               {lang === 'en' ? 'Contact' : 'Contacts'}
             </motion.button>
